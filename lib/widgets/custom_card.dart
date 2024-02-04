@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
+import 'package:store_app/screens/update_product_page.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key, required this.productModel});
@@ -10,7 +11,8 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        
+        Navigator.of(context)
+            .pushNamed(UpdateProduct.id, arguments: productModel);
       },
       child: Stack(
         clipBehavior: Clip.none,
