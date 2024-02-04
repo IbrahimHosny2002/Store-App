@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/models/product_model.dart';
+import 'package:store_app/screens/add_product.dart';
 import 'package:store_app/services/product_services.dart';
 import 'package:store_app/widgets/custom_card.dart';
 
@@ -13,7 +14,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, AddProduct.id);
+        },
         child: const Icon(
           Icons.add,
           color: Colors.white,
